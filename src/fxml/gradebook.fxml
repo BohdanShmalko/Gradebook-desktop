@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="660.0" prefWidth="1275.0" style="-fx-background-color: #bfceff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Gradebook">
+   <children>
+      <Pagination fx:id="main_paginator" layoutX="15.0" layoutY="18.0" maxPageIndicatorCount="21" prefHeight="621.0" prefWidth="1280.0" AnchorPane.rightAnchor="-1.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="550.0" prefWidth="967.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.gradebook.PracticeTable">
+   <children>
+      <TableView fx:id="table" layoutX="44.0" layoutY="53.0" prefHeight="396.0" prefWidth="876.0">
+        <columns>
+          <TableColumn fx:id="number" prefWidth="75.0" text="№ з/п" />
+          <TableColumn fx:id="practiceName" prefWidth="151.333251953125" text="Назва практики" />
+            <TableColumn fx:id="course" prefWidth="36.66668701171875" text="Курс" />
+            <TableColumn fx:id="place" prefWidth="294.0" text="Місцепроходження практики" />
+            <TableColumn fx:id="work" prefWidth="318.0" text="Ким працював" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

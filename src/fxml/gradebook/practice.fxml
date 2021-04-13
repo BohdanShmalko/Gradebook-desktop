@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="967.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.gradebook.Practice">
+   <children>
+      <TableView fx:id="table" layoutX="33.0" layoutY="64.0" prefHeight="383.0" prefWidth="892.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Тривалість практики">
+               <columns>
+                  <TableColumn fx:id="from" prefWidth="75.0" text="від (дата)" />
+                  <TableColumn fx:id="to" prefWidth="75.0" text="до (дата)" />
+               </columns>
+            </TableColumn>
+          <TableColumn fx:id="teachers" prefWidth="376.6666259765625" text="ПІБ викладача, керівника практики" />
+            <TableColumn minWidth="0.0" prefWidth="68.0" text="Відмітки про залік">
+               <columns>
+                  <TableColumn fx:id="mark" prefWidth="94.0" text="кількість балів" />
+                  <TableColumn fx:id="ects" prefWidth="57.3333740234375" text="ECTS" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="date" prefWidth="232.66670735677087" text="Дата складання" />
+        </columns>
+      </TableView>
+      <Label layoutX="35.0" layoutY="21.0" text="ПРАКТИКА">
+         <font>
+            <Font name="Arial" size="33.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

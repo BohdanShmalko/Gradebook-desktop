@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="967.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.gradebook.Marks">
+   <children>
+      <Label fx:id="semestr" layoutX="47.0" layoutY="44.0" text="-й семестр">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="years" layoutX="149.0" layoutY="45.0" text=" навчального року">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="46.0" layoutY="134.0" prefHeight="335.0" prefWidth="869.0">
+        <columns>
+          <TableColumn fx:id="number" prefWidth="68.00006103515625" text="№з/п" />
+          <TableColumn fx:id="discipline" minWidth="7.33331298828125" prefWidth="203.99993896484375" text="Назва навчальної дисципліни" />
+            <TableColumn minWidth="14.66668701171875" prefWidth="128.0" text="Кількість">
+               <columns>
+                  <TableColumn fx:id="hours" prefWidth="42.0" text="годин" />
+                  <TableColumn fx:id="credits" prefWidth="64.6666259765625" text="кредитів" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="teacher" prefWidth="226.0" text="Прізвище та ініціали екзаменатора" />
+            <TableColumn prefWidth="23.3333740234375" text="Підсумкова оцінка">
+               <columns>
+                  <TableColumn fx:id="mark" minWidth="0.0" prefWidth="97.55548095703125" text="кількість балів" />
+                  <TableColumn fx:id="ects" prefWidth="54.44451904296875" text="ECTS" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="date" prefWidth="111.33333333333337" text="Дата складання" />
+        </columns>
+      </TableView>
+      <Label layoutX="379.0" layoutY="87.0" text="ЕКЗАМЕНИ">
+         <font>
+            <Font name="Arial Bold" size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

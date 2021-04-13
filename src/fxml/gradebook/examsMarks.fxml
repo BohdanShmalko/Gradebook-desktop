@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="967.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.gradebook.ExamsMarks">
+   <children>
+      <TableView fx:id="table" layoutX="141.0" layoutY="57.0" prefHeight="375.0" prefWidth="671.0">
+         <columns>
+            <TableColumn prefWidth="334.66668701171875" text="Екзаменаційні оцінки">
+               <columns>
+                  <TableColumn fx:id="mark" prefWidth="100.0" text="кількість" />
+                  <TableColumn fx:id="ects" prefWidth="100.0" text="ects" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="commision" minWidth="0.0" prefWidth="469.99995930989587" text="Члени екзаменаційної комісії" />
+         </columns>
+      </TableView>
+      <Label layoutX="70.0" layoutY="461.0" text="Декан факультету : ">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

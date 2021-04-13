@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="fxml.gradebook.DegreeProject"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="550.0" prefWidth="967.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.gradebook.DegreeProject">
+   <children>
+      <Label layoutX="261.0" layoutY="66.0" text="ДИПЛОМНИЙ ПРОЕКТ (РОБОТА)" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="180.0">
+         <font>
+            <Font name="Arial Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="studentName" layoutX="266.0" layoutY="128.0" text="(прізвище, ім’я, по батькові студента)">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="topic" layoutX="53.0" layoutY="172.0" text="Тема проекту (роботи) : ">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="supervisor" layoutX="54.0" layoutY="216.0" text="Прізвище керівника : ">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="submissionDate" layoutX="54.0" layoutY="258.0" text="Дата подання проекту (роботи) у деканат (відділення) : ">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="protectionDate" layoutX="55.0" layoutY="297.0" text="Дата захисту роботи : ">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="334.0" text="Оцінка екзаменаційної комісії : ">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="mark" layoutX="239.0" layoutY="368.0" text="кількість балів : ">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="ects" layoutX="239.0" layoutY="405.0" text="за національною шкалою : ">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="commision" layoutX="50.0" layoutY="447.0" text="Члени екзаменаційної комісії : ">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

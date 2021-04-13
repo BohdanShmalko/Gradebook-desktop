@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="550.0" prefWidth="967.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.gradebook.Atestations">
+   <children>
+      <TableView fx:id="table" layoutX="140.0" layoutY="89.0" prefHeight="371.0" prefWidth="691.0">
+        <columns>
+          <TableColumn fx:id="number" prefWidth="75.0" text="№ з/п" />
+          <TableColumn fx:id="examName" prefWidth="424.0" text="Назва екзамену" />
+            <TableColumn fx:id="date" minWidth="0.0" prefWidth="187.3333740234375" text="Дата складання екзамену" />
+        </columns>
+      </TableView>
+      <Label layoutX="649.0" layoutY="43.0" text="АТЕСТАЦІЯ">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

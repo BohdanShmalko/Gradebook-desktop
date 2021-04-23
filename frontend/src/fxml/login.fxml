@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #bfceff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Login">
+   <children>
+      <Label layoutX="89.0" layoutY="14.0" prefWidth="122.0" text="Ввійти">
+         <font>
+            <Font name="Monotype Corsiva" size="38.0" />
+         </font>
+      </Label>
+      <TextField id="loginField" fx:id="loginField" layoutX="76.0" layoutY="73.0" promptText="Логін" style="-fx-border-radius: 5;" />
+      <PasswordField id="passwordField" fx:id="passwordField" layoutX="76.0" layoutY="118.0" promptText="Пароль" style="-fx-border-radius: 5;" />
+      <Button id="signInButton" fx:id="signInButton" contentDisplay="CENTER" layoutX="101.0" layoutY="224.0" mnemonicParsing="false" onAction="#click" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #d19428;" text="Ввійти">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorText" layoutX="39.0" layoutY="176.0" prefHeight="39.0" prefWidth="223.0" textFill="RED">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="remember" layoutX="106.0" layoutY="150.0" mnemonicParsing="false" text="Запам'ятати" />
+   </children>
+</AnchorPane>

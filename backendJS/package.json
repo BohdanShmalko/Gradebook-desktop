@@ -1,0 +1,18 @@
+{
+  "name": "backendjs",
+  "version": "1.0.0",
+  "description": "backend for java project",
+  "main": "./gradebookDesktop/app.js",
+  "dependencies": {
+    "pg": "^8.6.0",
+    "shvidko": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "nodemon ./gradebookDesktop/app.js"
+  },
+  "author": "",
+  "license": "MIT"
+}

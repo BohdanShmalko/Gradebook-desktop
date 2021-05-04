@@ -19,24 +19,24 @@ DBMS postgres is used to create a database
 
 #### Login form
 
-![login_image]()
+![login_image](https://github.com/BohdanShmalko/Gradebook-desktop/blob/main/images/login_image.png?raw=true)
 
 #### The gradebook
 
-![gradebook]()
+![gradebook](https://github.com/BohdanShmalko/Gradebook-desktop/blob/main/images/gradebook.png?raw=true)
 
-![exam]()
+![exam](https://github.com/BohdanShmalko/Gradebook-desktop/blob/main/images/exam.png?raw=true)
 
-![login_image]()
+![degree](https://github.com/BohdanShmalko/Gradebook-desktop/blob/main/images/degree.png?raw=true)
 
 #### Admin panel
 
-![users_admin]()
+![users_admin](https://github.com/BohdanShmalko/Gradebook-desktop/blob/main/images/users_admin.png?raw=true)
 
-![practice_admin]()
+![practice_admin](https://github.com/BohdanShmalko/Gradebook-desktop/blob/main/images/practice_admin.png?raw=true)
 
-![p_atestations_admin]()
+![p_atestations_admin](https://github.com/BohdanShmalko/Gradebook-desktop/blob/main/images/p_atestations_admin.png?raw=true)
 
 #### Database datalogic model
 
-![datalogic]()
+![datalogic](https://github.com/BohdanShmalko/Gradebook-desktop/blob/main/database/datalogicModel.png?raw=true)

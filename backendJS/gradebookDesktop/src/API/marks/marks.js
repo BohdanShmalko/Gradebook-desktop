@@ -1,9 +1,5 @@
 const {requestCreator} = require("shvidko");
 
-const information = requestCreator("post", "/information", (req, res) => {
-    res.send("hello from gradebook")
-})
-
 const marks = requestCreator("post", "/marks/?semester;species", (req, res) => {
     res.send("hello from gradebook")
 })
@@ -29,6 +25,14 @@ const degreeProject = requestCreator("post", "/degreeProject", (req, res) => {
 })
 
 const examinationCommission = requestCreator("post", "/examinationCommission", (req, res) => {
+    res.send("hello from gradebook")
+})
+
+const teacher = requestCreator("post", "/teacher", (req, res) => {
+    res.send("hello from gradebook")
+})
+
+const group = requestCreator("post", "/group", (req, res) => {
     res.send("hello from gradebook")
 })
 

@@ -1,8 +1,14 @@
 module.exports = (db) => ({
-    createUser: async () => {
+    createStudent: async (login, password) => {
+        return db.query(``, [])
+    },
+    createAdmin: async (login, password) => {
         return db.query(``, [])
     },
     getUserId: async () => {
+        return db.query(``, [])
+    },
+    getData : async (id) => {
         return db.query(``, [])
     }
 })

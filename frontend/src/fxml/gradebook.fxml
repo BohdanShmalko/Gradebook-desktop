@@ -12,11 +12,5 @@
         <Pagination fx:id="main_paginator" layoutX="15.0" layoutY="88.0" maxPageIndicatorCount="32" pageCount="32"
                     prefHeight="551.0" prefWidth="957.0" AnchorPane.bottomAnchor="20.66666666666663"
                     AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="164.0" AnchorPane.topAnchor="88.0"/>
-        <Button onAction="#click" fx:id="logout" layoutX="1183.0" layoutY="26.0" mnemonicParsing="false"
-                style="-fx-background-color: #f54254; -fx-text-fill: white;" text="Вийти">
-            <font>
-                <Font name="System Bold" size="15.0"/>
-            </font>
-        </Button>
     </children>
 </AnchorPane>

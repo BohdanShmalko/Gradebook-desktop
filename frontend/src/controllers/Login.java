@@ -1,6 +1,7 @@
 package controllers;
 
 import animations.Shake;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import helpers.ChangeWindow;
 import helpers.JSON;
 import helpers.JsonDb;
@@ -32,17 +33,18 @@ public class Login {
     @FXML
     void click(ActionEvent event) {
         String error = checkFields();
-
         if (error.isEmpty()) {
-            //TODO check login and password in server
-            JSONObject obj = new JSONObject();
+            //TODO check login and password in server (and return token and userStatus)
+            Authorize auth = new Authorize();// parse
+            auth.setToken("some token in future");
             if (remember.isSelected()) {
-                obj.put("login", loginField.getText());
-                obj.put("password", passwordField.getText());
-                obj.put("remember", true);
+                auth.setRemember(true);
             }
-            obj.put("token", "some token in future");
-            JsonDb.set(obj.toJSONString());
+            try {
+                JsonDb.set(JSON.stringify(auth));
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
             ChangeWindow changer = new ChangeWindow("/fxml/gradebook.fxml", signInButton);
             changer.hide();
             changer.load();
@@ -52,15 +54,13 @@ public class Login {
 
     @FXML
     public void initialize() {
-        try {
-            JSONObject db = JSON.parse(JsonDb.get());
-            loginField.setText((String) db.get("login"));
-            passwordField.setText((String) db.get("password"));
-            remember.setSelected((boolean) db.get("remember"));
-        } catch (ParseException e) {
-            e.printStackTrace();
+        Authorize auth = new Authorize(JsonDb.get());
+        if (auth.isRemember()){
+            remember.setSelected(auth.isRemember());
+            //TODO say from server login and password
+            loginField.setText(auth.getLogin());
+            passwordField.setText(auth.getPassword());
         }
-
     }
 
     private String checkFields() {

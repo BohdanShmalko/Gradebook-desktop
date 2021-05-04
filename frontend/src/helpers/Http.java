@@ -1,5 +1,7 @@
 package helpers;
 
+import org.json.simple.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -37,6 +39,8 @@ public class Http {
             this.connection.setDoOutput(true);
             this.connection.setConnectTimeout(5000);
             this.connection.setReadTimeout(5000);
+            JSONObject obj = JSON.parse(JsonDb.get());
+            this.connection.setRequestProperty("Set-Cookie", "token="+obj.get("token"));
             if (postDataBytes.length != 0){
                 this.connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
                 this.connection.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));

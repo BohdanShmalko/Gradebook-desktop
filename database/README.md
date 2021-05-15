@@ -31,4 +31,4 @@ ALTER ROLE gradeuser createrole createdb;
 
 ## Datalogic model
 
-![datalogic model](https://github.com/BohdanShmalko/Gradebook-desktop/...)
+![datalogic model](https://github.com/BohdanShmalko/Gradebook-desktop/raw/main/database/datalogicModel.png?raw=true)

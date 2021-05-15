@@ -44,7 +44,7 @@ CREATE TABLE Auths
     id       SERIAL       NOT NULL PRIMARY KEY,
     login    VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    status   VARCHAR(255) NOT NULL,
+    status   VARCHAR(255) NOT NULL
 );
 
 
@@ -65,7 +65,7 @@ CREATE TABLE Groups
     educational_level  VARCHAR(255) NOT NULL,
     form_education     VARCHAR(255) NOT NULL,
     specialty_id       INT          NOT NULL REFERENCES Specialties (id) ON DELETE CASCADE
-)
+);
 
 CREATE TABLE Students
 (
@@ -129,6 +129,7 @@ CREATE TABLE Thesis
 CREATE TABLE Thesis_members
 (
     id         SERIAL NOT NULL PRIMARY KEY,
+    status VARCHAR(255) NOT NULL,
     thesis_id  INT    NOT NULL REFERENCES Thesis (id) ON DELETE CASCADE,
     teacher_id INT    NOT NULL REFERENCES Teachers (id) ON DELETE CASCADE
 );

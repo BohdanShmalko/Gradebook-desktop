@@ -18,15 +18,6 @@ public class MarksController {
         }
     }
 
-    @PostMapping("/practiceTable")
-    public ResponseEntity createPracticeTable() {
-        try {
-            return ResponseEntity.ok("All work");
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error in server");
-        }
-    }
-
     @PostMapping("/practice")
     public ResponseEntity createPractice() {
         try {
@@ -45,26 +36,8 @@ public class MarksController {
         }
     }
 
-    @PostMapping("/examsMarks")
-    public ResponseEntity createExamsMarks() {
-        try {
-            return ResponseEntity.ok("All work");
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error in server");
-        }
-    }
-
     @PostMapping("/degreeProject")
     public ResponseEntity createDegreeProject() {
-        try {
-            return ResponseEntity.ok("All work");
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error in server");
-        }
-    }
-
-    @PostMapping("/examinationCommission")
-    public ResponseEntity createExaminationCommission() {
         try {
             return ResponseEntity.ok("All work");
         } catch (Exception e) {

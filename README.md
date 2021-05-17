@@ -32,13 +32,13 @@ create new admin account| /users/getUser | POST | {login, password} | NO | token
 description | url | method | {body}/params | need token | result
 ----|----|--------|-------------|------------|-------
 get information page | /gradebook/information | GET | --- | YES | {fullname, gradebook_number, course_admission, date_entry, date_issue, photoURL, group, dean}/error
-get marks page | /gradebook/marks | GET | page, species_name | YES | [subject, hours, loans, mark, ects, date, semester, teacher]/error
-get practice page | /gradebook/practice | GET | --- | YES | [from_date, to_date, teacher, mark, ects, date]/error
-get practice table page | /gradebook/practiceTable | GET | --- | YES | [name, course, place, worked]/error
-get atestations page | /gradebook/atestations | GET | --- | YES | [date, name]/error
-get exams marks page | /gradebook/examsMarks | GET | --- | YES | [mark, ects, [teacher]]/error
-get degree project page | /gradebook/degreeProject | GET | --- | YES | {student_name, topic, submission_date, date_protection, head, [teacher], mark, ects }/error
-get examination commission page | /gradebook/examinationCommission | GET | --- | YES | {decision, head, [teacher], date_issue, number, studentName, dean}/error
+get marks page | /gradebook/marks | GET | page, species_name | YES | marks : [{subject, hours, loans, mark, ects, date, semester, teacher}]/error
+get practice page | /gradebook/practice | GET | --- | YES | practices : [{from_date, to_date, teacher, mark, ects, date}]/error
+get practice table page | /gradebook/practiceTable | GET | --- | YES | practicesTable : [name, course, place, worked]/error
+get atestations page | /gradebook/atestations | GET | --- | YES | atestations : [{date, name}]/error
+get exams marks page | /gradebook/examsMarks | GET | --- | YES | examMarks : [{mark, ects, teachers : [{name, surname, fathername}]}]/error
+get degree project page | /gradebook/degreeProject | GET | --- | YES | {student_name, topic, submission_date, date_protection, head : {name, surname, fathername}, teachers : [{name, surname, fathername}], mark, ects }/error
+get examination commission page | /gradebook/examinationCommission | GET | --- | YES | {decision, head : {name, surname, fathername}, teachers : [{name, surname, fathername}], date_issue, number, studentName, dean}/error
 
 #### Marks (admin panel)
 

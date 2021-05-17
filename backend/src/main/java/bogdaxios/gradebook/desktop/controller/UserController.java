@@ -45,7 +45,7 @@ public class UserController {
         try {
             adminAuthService.registration(jwt, ca);
             return ResponseEntity.ok("ok");
-        } catch (UserAlreadyExist e) {
+        } catch (UserAlreadyExist | NotAuthorizedUser | TokenIsBroken e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error in server");
@@ -57,7 +57,7 @@ public class UserController {
         try {
             teacherAuthService.registration(jwt, ct);
             return ResponseEntity.ok("ok");
-        } catch (UserAlreadyExist e) {
+        } catch (UserAlreadyExist | NotAuthorizedUser | TokenIsBroken e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error in server");
@@ -69,7 +69,7 @@ public class UserController {
         try {
             groupAuthService.registration(jwt, cg);
             return ResponseEntity.ok("ok");
-        } catch (UserAlreadyExist e) {
+        } catch (UserAlreadyExist | NotAuthorizedUser | TokenIsBroken e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error in server");

@@ -1,8 +1,11 @@
 package bogdaxios.gradebook.desktop.controller;
 
-import bogdaxios.gradebook.desktop.entity.Auths;
+import bogdaxios.gradebook.desktop.exeptions.NotAuthorizedUser;
+import bogdaxios.gradebook.desktop.exeptions.TokenIsBroken;
+import bogdaxios.gradebook.desktop.model.user.*;
+import bogdaxios.gradebook.desktop.exeptions.IncorrectLoginInformation;
 import bogdaxios.gradebook.desktop.exeptions.UserAlreadyExist;
-import bogdaxios.gradebook.desktop.service.AuthService;
+import bogdaxios.gradebook.desktop.service.user.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,12 +16,24 @@ public class UserController {
     @Autowired
     private AuthService authService;
 
+    @Autowired
+    private StudentAuthService studentAuthService;
+
+    @Autowired
+    private AdminAuthService adminAuthService;
+
+    @Autowired
+    private TeacherAuthService teacherAuthService;
+
+    @Autowired
+    private GroupAuthService groupAuthService;
+
     @PostMapping("/registration/student")
-    public ResponseEntity createStudent(@RequestBody Auths auth) {
+    public ResponseEntity createStudent(@RequestHeader("Authorization") String jwt, @RequestBody CreateStudent cs) {
         try {
-            authService.registration(auth);
-            return ResponseEntity.ok("All work");
-        } catch (UserAlreadyExist e) {
+            studentAuthService.registration(jwt, cs);
+            return ResponseEntity.ok("ok");
+        } catch (UserAlreadyExist | NotAuthorizedUser | TokenIsBroken e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error in server");
@@ -26,10 +41,10 @@ public class UserController {
     }
 
     @PostMapping("/registration/admin")
-    public ResponseEntity createAdmin(@RequestBody Auths auth) {
+    public ResponseEntity createAdmin(@RequestHeader("Authorization") String jwt, @RequestBody CreateAdmin ca) {
         try {
-            authService.registration(auth);
-            return ResponseEntity.ok("All work");
+            adminAuthService.registration(jwt, ca);
+            return ResponseEntity.ok("ok");
         } catch (UserAlreadyExist e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
@@ -38,28 +53,37 @@ public class UserController {
     }
 
     @PostMapping("/create/teacher")
-    public ResponseEntity createTeacher(@RequestBody Auths auth) {
+    public ResponseEntity createTeacher(@RequestHeader("Authorization") String jwt, @RequestBody CreateTeacher ct) {
         try {
-            return ResponseEntity.ok("All work");
-        }catch (Exception e) {
+            teacherAuthService.registration(jwt, ct);
+            return ResponseEntity.ok("ok");
+        } catch (UserAlreadyExist e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error in server");
         }
     }
 
     @PostMapping("/create/group")
-    public ResponseEntity createGroup(@RequestBody Auths auth) {
+    public ResponseEntity createGroup(@RequestHeader("Authorization") String jwt, @RequestBody CreateGroup cg) {
         try {
-            return ResponseEntity.ok("All work");
-        }catch (Exception e) {
+            groupAuthService.registration(jwt, cg);
+            return ResponseEntity.ok("ok");
+        } catch (UserAlreadyExist e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error in server");
         }
     }
 
     @PostMapping("/getUser")
-    public ResponseEntity getUser(@RequestBody Auths auth) {
+    public ResponseEntity getUser(@RequestBody GetUser gu) {
         try {
-            return ResponseEntity.ok("All work");
-        }catch (Exception e) {
+            String token = authService.authentication(gu);
+            return ResponseEntity.ok(token);
+        } catch (IncorrectLoginInformation e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error in server");
         }
     }

@@ -24,7 +24,7 @@ description | url | method | {body}/params | need token | result
 create new student gradebook| /users/registration/student | POST | {login, password, fullname, gradebook_number, course_admission, photoURL, group_id} | YES | ok/error
 create new admin account| /users/registration/admin | POST | {login, password, fullname} | YES | ok/error
 create new teacher| /users/create/teacher | POST | {name, surname, fathername} | YES | ok/error
-create new group| /users/create/group | POST | {name, cafeda, training_direction, educational_level, form_education, specialty_id} | YES | ok/error
+create new group| /users/create/group | POST | {name, cafedra, training_direction, educational_level, form_education, specialty_id} | YES | ok/error
 create new admin account| /users/getUser | POST | {login, password} | NO | token(ok)/error
 
 #### Gradebook (student gradebook)

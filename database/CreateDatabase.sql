@@ -75,7 +75,7 @@ CREATE TABLE Students
     course_admission INT          NOT NULL,
     date_entry       TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
     date_issue       TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    photoURL         TEXT NULL,
+    photo_url         TEXT NULL,
     auth_id          INT          NOT NULL REFERENCES Auths (id) ON DELETE CASCADE,
     group_id         INT          NOT NULL REFERENCES Groups (id) ON DELETE CASCADE
 );
@@ -160,6 +160,9 @@ VALUES ('Факультет інформатики та обчислювальн
 
 INSERT INTO Specialties (name, number_name, faculties_id)
 VALUES ('Інженер програмного забезпечення', 121, 1);
+
+INSERT INTO Groups (name, cafeda, training_direction, educational_level, form_education, specialty_id)
+VALUES ('ІП-84', 'ОТ', 'бакалавр', 'повний', 'денна', 1);
 
 INSERT INTO Auths (login, password, status)
 VALUES ('7Vkv7N6p9pbeA48uLD2U', 'AiLGHgsm4j9D2K7692gg', 'admin');

@@ -44,10 +44,10 @@ get examination commission page | /gradebook/examinationCommission | GET | --- |
 
 description | url | method | {body}/params | need token | result
 ----|----|--------|-------------|------------|-------
-rate for exam or test | /addMarks/marks | POST | {studentId, ects, mark, teacher, page} | YES | ok/error
-rate for practice | /addMarks/practice | POST | [name, course, place, worked, from_date, to_date, teacher, mark, ects, studentId] | YES | ok/error
-rate for atestations | /addMarks/atestations | POST | [studentId, name, mark, ects, [teacher]] | YES | ok/error
-rate for degree project | /addMarks/degreeProject | POST | {student_name, topic, submission_date, date_protection, head, [teacher], mark, ects, decision, date_issue, number} | YES | ok/error
+rate for exam or test | /addMarks/marks | POST | {studentId, ects, mark, teacherId, page} | YES | ok/error
+rate for practice | /addMarks/practice | POST | practices : [{name, course, place, worked, from_date, to_date, teacherId, mark, ects, studentId}] | YES | ok/error
+rate for atestations | /addMarks/atestations | POST | atestations : [{studentId, name, mark, ects, teachers : [ids]}] | YES | ok/error
+rate for degree project | /addMarks/degreeProject | POST | {studentId, topic, submission_date, date_protection, headId, teachers : [ids], mark, ects, decision, date_issue, number} | YES | ok/error
 
 
 ### Results

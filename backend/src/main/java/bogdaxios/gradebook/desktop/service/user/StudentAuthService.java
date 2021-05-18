@@ -32,7 +32,7 @@ public class StudentAuthService  {
 
         Auths createdAuth = authRepo.save(auth);
         Students students = rs.getStudents();
-        students.setAuth_id(createdAuth.getId());
+        students.setAuthId(createdAuth.getId());
 
         return studentsRepo.save(students);
     }

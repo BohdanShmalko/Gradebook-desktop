@@ -1,9 +1,6 @@
 package bogdaxios.gradebook.desktop.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
 
@@ -13,7 +10,8 @@ public class Certification  extends Base{
     private String name;
     private int mark;
     private String ects;
-    private Long student_id;
+    @Column(name = "student_id")
+    private Long studentId;
 
     public Certification() {}
 
@@ -49,11 +47,11 @@ public class Certification  extends Base{
         this.ects = ects;
     }
 
-    public Long getStudent_id() {
-        return student_id;
+    public Long getStudentId() {
+        return studentId;
     }
 
-    public void setStudent_id(Long student_id) {
-        this.student_id = student_id;
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
     }
 }

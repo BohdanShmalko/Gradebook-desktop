@@ -1,14 +1,12 @@
 package bogdaxios.gradebook.desktop.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Thesis_members extends Base {
     private String status;
-    private Long thesis_id;
+    @Column(name = "thesis_id")
+    private Long thesisId;
     private Long teacher_id;
 
     public Thesis_members() {
@@ -22,12 +20,12 @@ public class Thesis_members extends Base {
         this.status = status;
     }
 
-    public Long getThesis_id() {
-        return thesis_id;
+    public Long getThesisId() {
+        return thesisId;
     }
 
-    public void setThesis_id(Long thesis_id) {
-        this.thesis_id = thesis_id;
+    public void setThesisId(Long thesisId) {
+        this.thesisId = thesisId;
     }
 
     public Long getTeacher_id() {

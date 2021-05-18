@@ -1,15 +1,13 @@
 package bogdaxios.gradebook.desktop.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
 public class Estimates  extends Base{
-    private String species_name;
+    @Column(name = "species_name")
+    private String speciesName;
     private String subject;
     private int hours;
     private int loans;
@@ -17,17 +15,18 @@ public class Estimates  extends Base{
     private String ects;
     private Timestamp date = new Timestamp(new Date().getTime());
     private int semester;
-    private Long student_id;
+    @Column(name = "student_id")
+    private Long studentId;
     private Long teacher_id;
 
     public Estimates() {}
 
-    public String getSpecies_name() {
-        return species_name;
+    public String getSpeciesName() {
+        return speciesName;
     }
 
-    public void setSpecies_name(String species_name) {
-        this.species_name = species_name;
+    public void setSpeciesName(String speciesName) {
+        this.speciesName = speciesName;
     }
 
     public String getSubject() {
@@ -86,12 +85,12 @@ public class Estimates  extends Base{
         this.semester = semester;
     }
 
-    public Long getStudent_id() {
-        return student_id;
+    public Long getStudentId() {
+        return studentId;
     }
 
-    public void setStudent_id(Long student_id) {
-        this.student_id = student_id;
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
     }
 
     public Long getTeacher_id() {

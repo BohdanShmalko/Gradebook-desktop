@@ -9,15 +9,20 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class CheckAuth {
-    public static UserId check(String jwt, String msg) throws NotAuthorizedUser, TokenIsBroken, ParseException {
+    public static UserId check(String jwt, String msg, String status) throws NotAuthorizedUser, TokenIsBroken {
         if (jwt.isEmpty()) {
             throw new NotAuthorizedUser("You is not authorized");
         }
         String jsonFromJWT = new JWT().decodeJWT(jwt);
-        JSONObject jsonObject = (JSONObject) new JSONParser().parse(jsonFromJWT);
+        JSONObject jsonObject = null;
+        try {
+            jsonObject = (JSONObject) new JSONParser().parse(jsonFromJWT);
+        } catch (ParseException e) {
+            throw new TokenIsBroken("Token body is broken!");
+        }
         Long userId = (Long) jsonObject.get("userId");
         String userStatus = (String) jsonObject.get("status");
-        if (!userStatus.equals("admin")) {
+        if (!userStatus.equals(status)) {
             throw new NotAuthorizedUser(msg);
         }
         UserId jwtInf = new UserId();

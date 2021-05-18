@@ -1,6 +1,7 @@
 package bogdaxios.gradebook.desktop.controller;
 
 import bogdaxios.gradebook.desktop.exeptions.NotAuthorizedUser;
+import bogdaxios.gradebook.desktop.exeptions.NotFoundInf;
 import bogdaxios.gradebook.desktop.exeptions.TokenIsBroken;
 import bogdaxios.gradebook.desktop.service.gradebook.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +40,7 @@ public class GradebookController {
     public ResponseEntity getInf(@RequestHeader("Authorization") String jwt) {
         try {
             return ResponseEntity.ok(informationService.getInf(jwt));
-        } catch (NotAuthorizedUser | TokenIsBroken e) {
+        } catch (NotAuthorizedUser | TokenIsBroken | NotFoundInf e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error in server");

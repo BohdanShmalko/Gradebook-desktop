@@ -1,9 +1,6 @@
 package bogdaxios.gradebook.desktop.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
 
@@ -13,9 +10,10 @@ public class Students extends Base {
     private int gradebook_number;
     private int course_admission;
     private Timestamp date_entry = new Timestamp(new Date().getTime());
-    private Date date_issue = new Timestamp(new Date().getTime());
+    private Timestamp date_issue = new Timestamp(new Date().getTime());
     private String photo_url = "https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg";
-    private Long auth_id;
+    @Column(name = "auth_id")
+    private Long authId;
     private Long group_id;
 
     public String getFullname() {
@@ -50,11 +48,11 @@ public class Students extends Base {
         this.date_entry = date_entry;
     }
 
-    public Date getDate_issue() {
+    public Timestamp getDate_issue() {
         return date_issue;
     }
 
-    public void setDate_issue(Date date_issue) {
+    public void setDate_issue(Timestamp date_issue) {
         this.date_issue = date_issue;
     }
 
@@ -66,12 +64,12 @@ public class Students extends Base {
         this.photo_url = photo_url;
     }
 
-    public Long getAuth_id() {
-        return auth_id;
+    public Long getAuthId() {
+        return authId;
     }
 
-    public void setAuth_id(Long auth_id) {
-        this.auth_id = auth_id;
+    public void setAuthId(Long authId) {
+        this.authId = authId;
     }
 
     public Long getGroup_id() {

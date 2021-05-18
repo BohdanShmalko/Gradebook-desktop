@@ -4,4 +4,5 @@ import bogdaxios.gradebook.desktop.entity.Specialties;
 import org.springframework.data.repository.CrudRepository;
 
 public interface SpecialtiesRepo extends CrudRepository<Specialties, Long> {
+    Specialties findSpecialtiesById(Long id);
 }

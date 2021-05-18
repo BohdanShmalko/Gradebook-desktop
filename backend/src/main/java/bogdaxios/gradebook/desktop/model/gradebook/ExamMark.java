@@ -5,7 +5,6 @@ import bogdaxios.gradebook.desktop.entity.Teachers;
 import java.util.List;
 
 public class ExamMark {
-    //mark, ects, [teacher]
     private int mark;
     private String ects;
     private List<Teachers> teachers;

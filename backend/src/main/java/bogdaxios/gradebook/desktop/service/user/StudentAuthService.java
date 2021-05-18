@@ -1,11 +1,11 @@
 package bogdaxios.gradebook.desktop.service.user;
 
-import bogdaxios.gradebook.desktop.exeptions.NotAuthorizedUser;
-import bogdaxios.gradebook.desktop.exeptions.TokenIsBroken;
-import bogdaxios.gradebook.desktop.model.user.CreateStudent;
 import bogdaxios.gradebook.desktop.entity.Auths;
 import bogdaxios.gradebook.desktop.entity.Students;
+import bogdaxios.gradebook.desktop.exeptions.NotAuthorizedUser;
+import bogdaxios.gradebook.desktop.exeptions.TokenIsBroken;
 import bogdaxios.gradebook.desktop.exeptions.UserAlreadyExist;
+import bogdaxios.gradebook.desktop.model.user.CreateStudent;
 import bogdaxios.gradebook.desktop.repository.AuthsRepo;
 import bogdaxios.gradebook.desktop.repository.StudentsRepo;
 import bogdaxios.gradebook.desktop.security.JWT;

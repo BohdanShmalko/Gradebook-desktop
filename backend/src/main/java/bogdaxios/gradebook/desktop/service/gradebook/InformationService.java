@@ -9,9 +9,11 @@ import bogdaxios.gradebook.desktop.exeptions.NotFoundInf;
 import bogdaxios.gradebook.desktop.exeptions.TokenIsBroken;
 import bogdaxios.gradebook.desktop.model.gradebook.GetInf;
 import bogdaxios.gradebook.desktop.model.secure.UserId;
-import bogdaxios.gradebook.desktop.repository.*;
+import bogdaxios.gradebook.desktop.repository.FacultiesRepo;
+import bogdaxios.gradebook.desktop.repository.GroupsRepo;
+import bogdaxios.gradebook.desktop.repository.SpecialtiesRepo;
+import bogdaxios.gradebook.desktop.repository.StudentsRepo;
 import bogdaxios.gradebook.desktop.service.CheckAuth;
-import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

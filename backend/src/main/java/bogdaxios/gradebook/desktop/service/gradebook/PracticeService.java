@@ -12,7 +12,6 @@ import bogdaxios.gradebook.desktop.repository.PracticesRepo;
 import bogdaxios.gradebook.desktop.repository.StudentsRepo;
 import bogdaxios.gradebook.desktop.repository.TeachersRepo;
 import bogdaxios.gradebook.desktop.service.CheckAuth;
-import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

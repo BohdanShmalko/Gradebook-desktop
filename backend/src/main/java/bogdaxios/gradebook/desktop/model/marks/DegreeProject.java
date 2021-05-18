@@ -1,7 +1,5 @@
 package bogdaxios.gradebook.desktop.model.marks;
 
-import bogdaxios.gradebook.desktop.entity.Teachers;
-
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -14,7 +12,8 @@ public class DegreeProject {
     private List<Long> teachers;
     private int mark;
     private String ects;
-    private boolean decision;
+    private String decision;
+    private boolean honors;
     private Timestamp date_issue;
     private int number;
 
@@ -82,12 +81,20 @@ public class DegreeProject {
         this.ects = ects;
     }
 
-    public boolean isDecision() {
+    public String getDecision() {
         return decision;
     }
 
-    public void setDecision(boolean decision) {
+    public void setDecision(String decision) {
         this.decision = decision;
+    }
+
+    public boolean isHonors() {
+        return honors;
+    }
+
+    public void setHonors(boolean honors) {
+        this.honors = honors;
     }
 
     public Timestamp getDate_issue() {

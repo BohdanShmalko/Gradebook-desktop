@@ -6,6 +6,9 @@ public class Mark {
     private int mark;
     private Long teacherId;
     private int page;
+    private String subject;
+    private int hours;
+    private int loans;
 
     public Long getStudentId() {
         return studentId;
@@ -45,6 +48,30 @@ public class Mark {
 
     public void setPage(int page) {
         this.page = page;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public int getLoans() {
+        return loans;
+    }
+
+    public void setLoans(int loans) {
+        this.loans = loans;
     }
 
     public Mark() {

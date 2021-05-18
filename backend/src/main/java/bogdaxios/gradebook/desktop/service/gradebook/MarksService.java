@@ -9,11 +9,9 @@ import bogdaxios.gradebook.desktop.model.gradebook.GetMark;
 import bogdaxios.gradebook.desktop.model.gradebook.Mark;
 import bogdaxios.gradebook.desktop.model.secure.UserId;
 import bogdaxios.gradebook.desktop.repository.EstimatesRepo;
-import bogdaxios.gradebook.desktop.repository.SpecialtiesRepo;
 import bogdaxios.gradebook.desktop.repository.StudentsRepo;
 import bogdaxios.gradebook.desktop.repository.TeachersRepo;
 import bogdaxios.gradebook.desktop.service.CheckAuth;
-import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +31,7 @@ public class MarksService {
 
     public GetMark getInf(String jwt, int pageNumber) throws NotAuthorizedUser, TokenIsBroken {
         UserId userId = CheckAuth.check(jwt, "You is not an student", "student");
-        String species; //pageNumber % 2 == 0 ? "exam" : "test";
+        String species;
         int semester;
         if (pageNumber % 2 == 0) {
             species = "test";

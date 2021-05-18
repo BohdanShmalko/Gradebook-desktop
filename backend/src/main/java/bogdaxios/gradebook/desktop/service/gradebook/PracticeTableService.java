@@ -2,17 +2,14 @@ package bogdaxios.gradebook.desktop.service.gradebook;
 
 import bogdaxios.gradebook.desktop.entity.Practices;
 import bogdaxios.gradebook.desktop.entity.Students;
-import bogdaxios.gradebook.desktop.entity.Teachers;
 import bogdaxios.gradebook.desktop.exeptions.NotAuthorizedUser;
 import bogdaxios.gradebook.desktop.exeptions.TokenIsBroken;
 import bogdaxios.gradebook.desktop.model.gradebook.GetPracticeTable;
-import bogdaxios.gradebook.desktop.model.gradebook.Practice;
 import bogdaxios.gradebook.desktop.model.gradebook.PracticeTable;
 import bogdaxios.gradebook.desktop.model.secure.UserId;
 import bogdaxios.gradebook.desktop.repository.PracticesRepo;
 import bogdaxios.gradebook.desktop.repository.StudentsRepo;
 import bogdaxios.gradebook.desktop.service.CheckAuth;
-import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

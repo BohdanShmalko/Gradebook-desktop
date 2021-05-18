@@ -10,7 +10,6 @@ import bogdaxios.gradebook.desktop.model.user.CreateAdmin;
 import bogdaxios.gradebook.desktop.repository.AdminsRepo;
 import bogdaxios.gradebook.desktop.repository.AuthsRepo;
 import bogdaxios.gradebook.desktop.service.CheckAuth;
-import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

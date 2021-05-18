@@ -1,10 +1,10 @@
 package bogdaxios.gradebook.desktop.service.user;
 
+import bogdaxios.gradebook.desktop.entity.Groups;
 import bogdaxios.gradebook.desktop.exeptions.NotAuthorizedUser;
 import bogdaxios.gradebook.desktop.exeptions.TokenIsBroken;
-import bogdaxios.gradebook.desktop.model.user.CreateGroup;
-import bogdaxios.gradebook.desktop.entity.Groups;
 import bogdaxios.gradebook.desktop.exeptions.UserAlreadyExist;
+import bogdaxios.gradebook.desktop.model.user.CreateGroup;
 import bogdaxios.gradebook.desktop.repository.GroupsRepo;
 import bogdaxios.gradebook.desktop.security.JWT;
 import org.springframework.beans.factory.annotation.Autowired;

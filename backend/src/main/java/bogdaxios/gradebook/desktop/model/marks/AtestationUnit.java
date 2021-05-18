@@ -1,7 +1,5 @@
 package bogdaxios.gradebook.desktop.model.marks;
 
-import bogdaxios.gradebook.desktop.entity.Teachers;
-
 import java.util.List;
 
 public class AtestationUnit {

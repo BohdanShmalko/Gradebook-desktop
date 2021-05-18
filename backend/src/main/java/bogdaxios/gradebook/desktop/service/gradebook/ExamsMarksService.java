@@ -7,7 +7,6 @@ import bogdaxios.gradebook.desktop.entity.Teachers;
 import bogdaxios.gradebook.desktop.exeptions.NotAuthorizedUser;
 import bogdaxios.gradebook.desktop.exeptions.TokenIsBroken;
 import bogdaxios.gradebook.desktop.model.gradebook.ExamMark;
-import bogdaxios.gradebook.desktop.model.gradebook.GetAtestations;
 import bogdaxios.gradebook.desktop.model.gradebook.GetExamsMarks;
 import bogdaxios.gradebook.desktop.model.secure.UserId;
 import bogdaxios.gradebook.desktop.repository.CertificationRepo;
@@ -15,7 +14,6 @@ import bogdaxios.gradebook.desktop.repository.Certification_membersRepo;
 import bogdaxios.gradebook.desktop.repository.StudentsRepo;
 import bogdaxios.gradebook.desktop.repository.TeachersRepo;
 import bogdaxios.gradebook.desktop.service.CheckAuth;
-import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
